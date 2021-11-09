@@ -18,33 +18,40 @@ While the answer to the overarching question of whether men and women are uneven
 
 Research Questions: A list of research questions you would like to address during the project.
 
+**Meta Analysis of Media**
+
 - Proportion of female chief-editors in media mentioned quotebank
     - Weighted after readership
     - Political Spectrum
     - Theme
     - total
 
-Quote Analysis
+**Quote Issuers Analysis**
+
 - Proportion of females quoted in entirety of quotebank
     - Fine grained analysis across different topics of quotes
         - International affairs, politics, tech, finance, “neighbourhood stories”, science,...
         - Types of journals 
         - Size (global, national, local distribution of medium)
         - Political affiliation - based on (https://mediabiasfactcheck.com/)
-
-    - Timeline
-
-    - Language by which women are addressed within quote
-        - “woman/girl” vs “man/boy”
-        - most common words (apart from linkers) used in quotes where women are mentioned versus men
-        - distribution of female-associated strong language across different media (obviously within quotes this may be the case versus in normal text one would not assume to see language of such register)
-        - Sentiment toward women in quoted texts
-
     - Language women use in quotes
         - Topic analysis: What do women speak about?
-        - Sentiment analysis: How do women speak about things?
+        - Sentiment analysis: How do women speak about things? Positively, negatively,... 
 
-Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
+    - Timeline of effects
+
+**Quote Analysis specifically considering men/women - third dimension as a bonus **
+
+- Language by which women are addressed within quote
+    - “woman/girl” vs “man/boy” count
+    - most common words (apart from linkers) used in quotes where women are mentioned versus men - Does this allow for some portrayal of genders into certain stereotypes?
+     
+
+Proposed additional datasets (if any): 
+- 
+
+
+List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
     
     
     
