@@ -1,11 +1,10 @@
 ## FEMEDIA - Analyzing female representation in English-speaking written media
  
 ### Abstract
-We believe that media outlets can only be unbiased, if the people in charge, the workers as well as the voices portrayed come from a diverse and society-representative background. In this work we focus on gender representation in English-speaking media with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
+We believe that media outlets can only be unbiased, if the people in charge as well as the voices portrayed come from a diverse and society-representative background. Here we focus on gender representation in English-speaking media with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
 
-Using the information about the quotes – the person being cited as well as the provenance of the news article – we explore the representation of female voices on three different levels: At the central level we investigate the ratio of quotes in the quotebank stemming from women under a variety of different conditions (extracted from the newspaper additional information). For that we enriched Quotebank with Wikidata entries about the speakers as well as bias rankings/political spectrum information about most newspapers.
+Using the information about the quotes – the person being cited as well as the provenance of the news article – we explore the representation of female voices on three different levels: At the central level we investigate the ratio of quotes in the quotebank stemming from women under a variety of different conditions, such as political affiliation of the newspapers, readership size, etc. 
 On a meta-level we also investigate the proportion of  female editors in the news outlets present, again in a detailed fashion across the accessible dimensions. These insights we link to the proportion of women cited within the respective newspapers.
-
 Thirdly, utilizing the content of the quotes themselves we determine whether a difference in topics can be observed for which the different genders are cited. Furthermore, with a similar method we investigate the different contextualization of women and men within the news stories and deduce potential stereotype propagations.
  
   
@@ -23,12 +22,12 @@ In the following, we describe the main functionality of the files in the reposit
 |   ├── cleaning.ipynb: Cleaning and saving the original files to hdf5 format
 |   ├── Get_word_count_of_quotes.ipynb : Small notebook to determine the length of the quotations
 |   ├── GDSMM_Women_Men_quote_content_2020.ipynb : Extended Topic Analysis to quotes specifically mentioning women and men to determine    their contextualization
-└── .
+.
 ```
  
 ### Research Questions
 
-## Quote Issuers Analysis
+#### Quote Issuers Analysis
 - Proportion of females quoted in entirety of quotebank
   ![gender_2020_speakers](https://user-images.githubusercontent.com/91182598/141517273-7de6f3fc-5df5-45f2-b72c-8872cdee49c5.png)
 
@@ -44,7 +43,7 @@ In the following, we describe the main functionality of the files in the reposit
      - Topic analysis: What do women speak about? And how is this with respect to men?
      - Sentiment analysis: How do women speak about things? Positively, negatively,...
      - 
-## Meta Analysis of Media
+#### Meta Analysis of Media
 - Analysis of the proportion of female chief-editors in media mentioned quotebank weighted according to 
     - Readership Size
     - Political Spectrum
@@ -52,7 +51,7 @@ In the following, we describe the main functionality of the files in the reposit
     - total
       ![gender_2020_editors](https://user-images.githubusercontent.com/91182598/141517470-e64c68fc-c549-431d-8eb0-8dd73e4fb690.png)
 
-## Analysis of quotes specifically mentioning men/women
+#### Analysis of quotes specifically mentioning men/women
 - Determination of most common words/topics used in quotes where women versus men are mentioned: 
   Can a difference be observed and do these indicate portrayal of genders into certain stereotypes? 
   
@@ -63,7 +62,7 @@ In the following, we describe the main functionality of the files in the reposit
   ![test_word_maps_male_topic_1](https://user-images.githubusercontent.com/91182598/141510850-c1a44e76-f78a-4ca1-b394-764981af9740.png)
 
     
-## Abandoned ideas
+#### Abandoned ideas
 - We have considered also investigating the timeline of the effects in question, however, we dropped the idea, as 5 years are too short to expect big societal shifts. We are aware that MeToo started in October 2017, and this would be a potential temporal splitting point for the data we are interested in. Nevertheless, since we are more focusing on the representation of women in the media landscape and how media portray women, the debate around sexual harassment definitely will influence the way women are talked about (ie. women being more often referred to as victims due to the abundance of similar stories), but beyond this analysis, which we implicitly plan to capture, MeToo does not directly relate to our research question.
 
 
@@ -120,7 +119,7 @@ The package is widely used and can handle big amounts of data. Further it is pre
 ### Organization within the team
 - Salome: 
     - GSDMM Analysis of Topics
-    - jointly with Patricia GSDMM Analysis of Quotes specifically talking about women/men
+    - jointly with Patricia GSDMM analysis of quotes specifically talking about women/men
 - Patricia: 
     - Representation of women within text - Topic analysis
     - Initialization of github pages
