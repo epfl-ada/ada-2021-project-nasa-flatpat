@@ -1,15 +1,36 @@
-**FEMEDIA - Analyzing female representation in English-speaking written media**
+## FEMEDIA - Analyzing female representation in English-speaking written media
  
-**Abstract**:
+### Abstract
 We believe that media outlets can only be unbiased, if the people in charge, the workers as well as the voices portrayed come from a diverse and society-representative background. In this work we focus on gender representation in English-speaking media with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
 Using the information about the quotes – the person being cited as well as the provenance of the news article – we explore the representation of female voices on three different levels: At the central level we investigate the ratio of quotes in the quotebank stemming from women under a variety of different conditions (extracted from the newspaper additional information). For that we enriched Quotebank with Wikidata entries about the speakers as well as bias rankings/political spectrum information about most newspapers.
 On a meta-level we also investigate the proportion of  female editors in the news outlets present, again in a detailed fashion across the accessible dimensions. These insights we link to the proportion of women cited within the respective newspapers.
 Thirdly, utilizing the content of the quotes themselves we determine whether a difference in topics can be observed for which the different genders are cited. Furthermore, with a similar method we investigate the different contextualization of women and men within the news stories and deduce potential stereotype propagations.
  
- 
-**Research Questions**
+  
+### Code Description
+In the following, we describe the main functionality of the files in the repository.
 
-**Quote Issuers Analysis**
+```
+.
+├── README.md
+├── data    <- Please insert train.csv and test.csv here!
+│   ├── final-submission.csv
+├── data_processing.py
+├── experiments.ipynb
+├── figs    <- Figure Outputs from cross validation
+│   ├── cross_validation_least_degree.pdf
+│   ├── cross_validation_log_degree.pdf
+│   ├── cross_validation_reg_log_lambda.pdf
+│   ├── cross_validation_ridge_lamdas.pdf
+│   └── cross_validation_ridge_lamdas_with_degree.pdf
+├── implementations.py
+├── proj1_helpers.py
+└── run.py
+```
+ 
+### Research Questions
+
+## Quote Issuers Analysis
 - Proportion of females quoted in entirety of quotebank
     - Fine grained analysis across different topics of quotes
         - International affairs, politics, tech, finance, “neighbourhood stories”, science, health,...
@@ -19,22 +40,23 @@ Thirdly, utilizing the content of the quotes themselves we determine whether a d
  - Language women use in quotes
      - Topic analysis: What do women speak about? And how is this with respect to men?
      - Sentiment analysis: How do women speak about things? Positively, negatively,...
-
-**Meta Analysis of Media**
+     - 
+## Meta Analysis of Media
 - Analysis of the proportion of female chief-editors in media mentioned quotebank weighted according to 
     - Readership Size
     - Political Spectrum
     - Theme (across selected news papers)
     - total
 
-**Analysis of quotes specifically mentioning men/women**
-    - Determination of most common words/topics used in quotes where women versus men are mentioned: Can a difference be observed and do these indicate portrayal of genders into certain stereotypes? 
+## Analysis of quotes specifically mentioning men/women
+- Determination of most common words/topics used in quotes where women versus men are mentioned: 
+  Can a difference be observed and do these indicate portrayal of genders into certain stereotypes? 
     
-**Abandoned ideas**    
+## Abandoned ideas
 - We have considered also investigating the timeline of the effects in question, however, we dropped the idea, as 5 years are too short to expect big societal shifts. We are aware that MeToo started in October 2017, and this would be a potential temporal splitting point for the data we are interested in. Nevertheless, since we are more focusing on the representation of women in the media landscape and how media portray women, the debate around sexual harassment definitely will influence the way women are talked about (ie. women being more often referred to as victims due to the abundance of similar stories), but beyond this analysis, which we implicitly plan to capture, MeToo does not directly relate to our research question.
 
- 
-**Proposed additional datasets**:
+
+### Proposed additional datasets
 - **Wikidata links**
 We use the QID of the speaker to obtain information about the gender and further scrape Wikidata information about the newspapers (from their url) to get insights on readership and editors. We access the data using the SPARQL query service, implemented in Python. 
 
@@ -45,7 +67,7 @@ From the github repository linked above, we obtained the dataset containing the 
 
     
     
- **Methods**
+### Methods
 - VAEX – vaex.io/docs – fast on the fly data science tool to join all data, merge with other dataframes, perform filtering of the specific sub-analyses and save in an efficient manner for later continuation.
 - nltk.VADER – Sentiment analysis package that is part of one of the most common natural language processing toolkits in python.
 The package is widely used and can handle big amounts of data. Further it is pretrained on Social Media texts such as Twitter posts (short texts in the same size range as quotes) and can be easily adapted/extended to slightly different types of texts. 
@@ -58,7 +80,7 @@ The package is widely used and can handle big amounts of data. Further it is pre
 - Integrated Vaex functions for plotting, Seaborn and Matplotlib plotting tools
 
  
-**Proposed timeline**
+### Proposed timeline
 - by Nov. 19th:
     - Extended descriptive statistics to entire dataset
         - male-female ratio of chief-editors
@@ -84,7 +106,7 @@ The package is widely used and can handle big amounts of data. Further it is pre
     - finalizing description and website and hand-in
 
 
-**Organization within the team**
+### Organization within the team
 - Salome: 
     - GSDMM Analysis of Topics
     - jointly with Patricia GSDMM Analysis of Quotes specifically talking about women/men
@@ -100,4 +122,3 @@ The package is widely used and can handle big amounts of data. Further it is pre
     - Fine-tuning of plotting
 -  all:
     - Description /Textual presentation
- 
