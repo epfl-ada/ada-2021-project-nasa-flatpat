@@ -17,10 +17,12 @@ In the following, we describe the main functionality of the files in the reposit
 │   ├── Exploratory Statistics
 |   ├── Database Enrichment with Wikidata and Bias Information of Newspapers
 |   ├── Topic Analysis pipeline applied to Quotes issued by Male vs. Female speakers
-├── 
-├── experiments.ipynb
+├── notebooks  <-- additional scripts
+|   ├── cleaning.ipynb: Cleaning and saving the original files to hdf5 format
+|   ├── Get_word_count_of_quotes.ipynb : Small notebook to determine the length of the quotations
+|   ├── GDSMM_Women_Men_quote_content_2020.ipynb : Extended Topic Analysis to quotes specifically mentioning women and men to determine    their contextualization
 
-└── run.py
+└── .
 ```
  
 ### Research Questions
