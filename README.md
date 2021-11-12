@@ -2,8 +2,10 @@
  
 ### Abstract
 We believe that media outlets can only be unbiased, if the people in charge, the workers as well as the voices portrayed come from a diverse and society-representative background. In this work we focus on gender representation in English-speaking media with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
+
 Using the information about the quotes – the person being cited as well as the provenance of the news article – we explore the representation of female voices on three different levels: At the central level we investigate the ratio of quotes in the quotebank stemming from women under a variety of different conditions (extracted from the newspaper additional information). For that we enriched Quotebank with Wikidata entries about the speakers as well as bias rankings/political spectrum information about most newspapers.
 On a meta-level we also investigate the proportion of  female editors in the news outlets present, again in a detailed fashion across the accessible dimensions. These insights we link to the proportion of women cited within the respective newspapers.
+
 Thirdly, utilizing the content of the quotes themselves we determine whether a difference in topics can be observed for which the different genders are cited. Furthermore, with a similar method we investigate the different contextualization of women and men within the news stories and deduce potential stereotype propagations.
  
   
