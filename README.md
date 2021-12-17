@@ -23,8 +23,12 @@ In the following, we describe the main functionality of the files in the reposit
 │   ├── Exploratory Statistics
 |   ├── Database Enrichment with Wikidata and Bias Information of Newspapers
 |   ├── Topic Analysis pipeline applied to Quotes issued by Male vs. Female speakers
-├── notebooks  <-- additional scripts
-|   ├── cleaning - initial data cleaning
+├── notebooks:  <-- additional scripts for cleaning & running topic analysis on randomly sampled subset of data (1.5 Mio quotes)
+|   ├── cleaning - initial data and cleaning (as in MS2)
+|   ├── GDSMM-Final_Pipeline_and_topic_by_gender - Input: subsampled dataset, Output: NLP Preprocessed Dataset (Tokenization, Lemmatization, Generic stopword Removal) &   
+|   |   Subsequent GDSMM Topic analysis for quotes issued by men and women
+|   ├──GDSMM_Topics_about_Gender_plus_Statistics - Employ same pipeline as above except NLP preprocessing: Input: Preprocessed subsample, Output: GDSMM Topic analysis for 
+|      quotes about men and women, Descriptive Statistics on Topics by different Genders and about different genders according to political bias and editor gender.
 .
 ```
  
@@ -34,8 +38,6 @@ In the following, we describe the main functionality of the files in the reposit
 - Proportion of females quoted in entirety of quotebank
     - Fine grained analysis across different topics found in quotes
         - Politics, global issues, economy, health, lifestyle, ...
-        - Types of journals
-        - Consummation (low, medium, high traffic of the medim) - based on (https://mediabiasfactcheck.com/)
         - Political affiliation - based on (https://mediabiasfactcheck.com/)
 
  - Language women use in quotes
@@ -49,12 +51,12 @@ In the following, we describe the main functionality of the files in the reposit
     - Political Spectrum
 
 #### Analysis of quotes specifically mentioning men/women
-- Determination of most common words/topics used in quotes where women versus men are mentioned: 
+- Determination of most common topics used in quotes where women versus men are mentioned: 
   Can a difference be observed and do these indicate portrayal of genders into certain stereotypes? 
       
 #### Abandoned ideas
 - We have considered also investigating the timeline of the effects in question, however, we dropped the idea, as 5 years are too short to expect big societal shifts. We are aware that MeToo started in October 2017, and this would be a potential temporal splitting point for the data we are interested in. Nevertheless, since we are more focusing on the representation of women in the media landscape and how media portray women, the debate around sexual harassment definitely will influence the way women are talked about (ie. women being more often referred to as victims due to the abundance of similar stories), but beyond this analysis, which we implicitly plan to capture, MeToo does not directly relate to our research question.
-
+- We additionally investigated the top 10 nouns, verbs, adjectives used by women and men quotes as well as in quotes talking about the respective genders, but did not obtain very telling results. This may be due to the fact that the difference lies more in the distinct combination of the same words (see our topic analysis) than in the different words themselves. As we saw in the topic analysis, the "difference" in topics lay mostly in less prevalent ones - where the corresponding words would not make it into the top 10. The only excpetion was men top words having a few sports words included, but other than that it was mainly the ordering that was slightly different - nothing one could base any type of analysis.
 
 ### Additional datasets
 - **Wikidata links**
@@ -62,10 +64,12 @@ We use the QID of the speaker to obtain information about the gender and further
 
 - **Bias ranking of English-speaking media**
 In order to analyse the effect the bias of a newspaper has on female representation, we use a dataset (https://gist.github.com/nsfyn55/605783ac8de36f361fb10ef187272113)  extracted from https://mediabiasfactcheck.com, containing the bias ranking of most English-speaking media. The Methodology used by Media Bias / Fact Check is to both classify the political bias (from extreme left to extreme right – based on the US political landscape) as well as the Factual Reporting Score from Very High to Very low ( in 6 steps). 
-From the github repository linked above, we obtained the dataset containing the site name, url, bias rating, and factual reporting score, to which we added the popularity level (minimal, medium, or high traffic). This dataset still needs to be curated, as new newspapers have been evaluated since the dataset was created. We plan to do this either manually or by doing further web scraping, depending on which journals we choose to filter on and how much data we are missing.
- We will use this to filter and compare female representation across the scales made available via this classification.
+From the github repository linked above, we obtained the dataset containing the site name, url, bias rating, and factual reporting and traffic score. 
+We used this dataset this to filter and compare female representation across the scales made available via this classification.
 
-    
+- **Hand-annotated Editor dataset**
+In addition to the metrics about the newspapers themselves, we also researched the editors-in-chief of the 147 HIGH-TRAFFIC media based on the Media Bias Fact Check classification to investigate the influence of the content decision maker's gender on the female representation.
+
     
 ### Methods
 - VAEX – vaex.io/docs – fast on the fly data science tool to join all data, merge with other dataframes, perform filtering of the specific sub-analyses and save in an efficient manner for later continuation.
