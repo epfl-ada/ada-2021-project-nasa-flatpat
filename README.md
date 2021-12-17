@@ -82,6 +82,10 @@ From the github repository linked above, we obtained the dataset containing the 
 
 
 ### Distribution of the work load
+*disclaimer*: most of our work on this project was done using Google Colab and Drive, which is why the
+amount of commits in this repository is (weirdly) low - everyone put in the work, we just found it made
+more sense to work on Colab considering the amount of data we had !
+
 - Patricia: 
     - Topic analysis on Quotes about Women/Men
     - Descriptive analysis topics
