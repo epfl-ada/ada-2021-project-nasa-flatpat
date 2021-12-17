@@ -93,7 +93,7 @@ more sense to work on Colab considering the amount of data we had !
 - Patricia: 
     - Topic analysis on Quotes about Women/Men
     - Descriptive analysis topics
-    - Writing datastory, page design
+    - Designing and writing datastory, page design
 - Natasa:
     - Data loading and subsampling
     - Descriptive Statistics US high traffic dataset, subsampled set, topics
