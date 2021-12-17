@@ -78,7 +78,8 @@ From the github repository linked above, we obtained the dataset containing the 
 
 ### Distribution of the work load
 - Patricia: 
-    - Topic analysis, descriptive analysis topics
+    - Topic analysis on Quotes about Women/Men
+    - Descriptive analysis topics
     - Writing datastory, page design
 - Natasa:
     - Data loading and subsampling
@@ -90,7 +91,7 @@ From the github repository linked above, we obtained the dataset containing the 
     - Setting up of the Jekyll theme on github, graphical design 
 - Salome: 
     - Data loading, processing subsampling
-    - GSDMM pipeline and topics analysis
+    - GSDMM pipeline and topics analysis on Quotes by Women/Men
     - Writing datastory, fine tuning website
 - All:
     - Hand-annotate editors and editor's gender
