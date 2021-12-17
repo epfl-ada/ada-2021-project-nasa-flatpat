@@ -27,39 +27,26 @@ In the following, we describe the main functionality of the files in the reposit
 
 #### Quote Issuers Analysis
 - Proportion of females quoted in entirety of quotebank
-  ![gender_2020_speakers](https://user-images.githubusercontent.com/91182598/141517273-7de6f3fc-5df5-45f2-b72c-8872cdee49c5.png)
-
-    - Fine grained analysis across different topics of quotes
-        - International affairs, politics, tech, finance, “neighbourhood stories”, science, health,...
+    - Fine grained analysis across different topics found in quotes
+        - Politics, global issues, economy, health, lifestyle, ...
         - Types of journals
-        - Size (global, national, local distribution of medium)
+        - Consummation (low, medium, high traffic of the medim) - based on (https://mediabiasfactcheck.com/)
         - Political affiliation - based on (https://mediabiasfactcheck.com/)
- 
-        ![politics_ratio](https://user-images.githubusercontent.com/91182598/141517591-26231542-692c-4bcc-bf13-9f9d3f349d91.png)
 
  - Language women use in quotes
      - Topic analysis: What do women speak about? And how is this with respect to men?
-     - Sentiment analysis: How do women speak about things? Positively, negatively,...
-     - 
+     - Does it differ in media of varying political inclination?
+     - Or does it make a different for journals in which the person at the head of the editorial board is female or male?
+     
 #### Meta Analysis of Media
 - Analysis of the proportion of female chief-editors in media mentioned quotebank weighted according to 
-    - Readership Size
+    - Overall
     - Political Spectrum
-    - Theme (across selected news papers)
-    - total
-      ![gender_2020_editors](https://user-images.githubusercontent.com/91182598/141517470-e64c68fc-c549-431d-8eb0-8dd73e4fb690.png)
 
 #### Analysis of quotes specifically mentioning men/women
 - Determination of most common words/topics used in quotes where women versus men are mentioned: 
   Can a difference be observed and do these indicate portrayal of genders into certain stereotypes? 
-  
-  One topic cluster for women-filtered quotes from the dataset of 2020 - women as assault victims
-  ![test_word_maps_female_topic_0](https://user-images.githubusercontent.com/91182598/141510847-d37e6722-b1eb-45c1-a9d2-d1b723b428e6.png)
-  
-  An equally sourced word cluster for men - sports and youth
-  ![test_word_maps_male_topic_1](https://user-images.githubusercontent.com/91182598/141510850-c1a44e76-f78a-4ca1-b394-764981af9740.png)
-
-    
+      
 #### Abandoned ideas
 - We have considered also investigating the timeline of the effects in question, however, we dropped the idea, as 5 years are too short to expect big societal shifts. We are aware that MeToo started in October 2017, and this would be a potential temporal splitting point for the data we are interested in. Nevertheless, since we are more focusing on the representation of women in the media landscape and how media portray women, the debate around sexual harassment definitely will influence the way women are talked about (ie. women being more often referred to as victims due to the abundance of similar stories), but beyond this analysis, which we implicitly plan to capture, MeToo does not directly relate to our research question.
 
