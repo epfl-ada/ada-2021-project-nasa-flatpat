@@ -1,11 +1,11 @@
 ## FEMEDIA - Analyzing female representation in English-speaking written media
  
 ### Abstract
-We believe that media outlets can only be unbiased, if the people in charge as well as the voices portrayed come from a diverse and society-representative background. Here we focus on gender representation in English-speaking media with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
+We believe that media outlets can only be unbiased, if the people in charge as well as the voices portrayed come from a diverse and society-representative background. Here we focus on gender representation in US media that is consumed with the higher frequency, defined based on online page views (https://mediabiasfactcheck.com/methodology/), with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
 
 Using the information about the quotes – the person being cited as well as the provenance of the news article – we explore the representation of female voices on three different levels: At the central level we investigate the ratio of quotes in the quotebank stemming from women under a variety of different conditions, such as political affiliation of the newspapers, readership size, etc. 
 On a meta-level we also investigate the proportion of  female editors in the news outlets present, again in a detailed fashion across the accessible dimensions. These insights we link to the proportion of women cited within the respective newspapers.
-Thirdly, utilizing the content of the quotes themselves we determine whether a difference in topics can be observed for which the different genders are cited. Furthermore, with a similar method we investigate the different contextualization of women and men within the news stories and deduce potential stereotype propagations.
+Thirdly, utilizing the content of the quotes themselves we determine whether a difference in topics for which people of different gender are cited can be observed. Furthermore, with a similar method we investigate the different contextualization of women and men within the news stories and deduce potential stereotype propagations.
  
   
 ### Code Description
@@ -19,9 +19,7 @@ In the following, we describe the main functionality of the files in the reposit
 |   ├── Database Enrichment with Wikidata and Bias Information of Newspapers
 |   ├── Topic Analysis pipeline applied to Quotes issued by Male vs. Female speakers
 ├── notebooks  <-- additional scripts
-|   ├── cleaning.ipynb: Cleaning and saving the original files to hdf5 format
-|   ├── Get_word_count_of_quotes.ipynb : Small notebook to determine the length of the quotations
-|   ├── GDSMM_Women_Men_quote_content_2020.ipynb : Extended Topic Analysis to quotes specifically mentioning women and men to determine    their contextualization
+|   ├── To be added!!
 .
 ```
  
@@ -66,7 +64,7 @@ In the following, we describe the main functionality of the files in the reposit
 - We have considered also investigating the timeline of the effects in question, however, we dropped the idea, as 5 years are too short to expect big societal shifts. We are aware that MeToo started in October 2017, and this would be a potential temporal splitting point for the data we are interested in. Nevertheless, since we are more focusing on the representation of women in the media landscape and how media portray women, the debate around sexual harassment definitely will influence the way women are talked about (ie. women being more often referred to as victims due to the abundance of similar stories), but beyond this analysis, which we implicitly plan to capture, MeToo does not directly relate to our research question.
 
 
-### Proposed additional datasets
+### Additional datasets
 - **Wikidata links**
 We use the QID of the speaker to obtain information about the gender and further scrape Wikidata information about the newspapers (from their url) to get insights on readership and editors. We access the data using the SPARQL query service, implemented in Python. 
 
@@ -79,8 +77,7 @@ From the github repository linked above, we obtained the dataset containing the 
     
 ### Methods
 - VAEX – vaex.io/docs – fast on the fly data science tool to join all data, merge with other dataframes, perform filtering of the specific sub-analyses and save in an efficient manner for later continuation.
-- nltk.VADER – Sentiment analysis package that is part of one of the most common natural language processing toolkits in python.
-The package is widely used and can handle big amounts of data. Further it is pretrained on Social Media texts such as Twitter posts (short texts in the same size range as quotes) and can be easily adapted/extended to slightly different types of texts. 
+- Beautiful soup was used to scrape mediabiasfactcheck.com and generate the journal dataset 
 - GSDMM ( Gibbs sampling algorithm for a Dirichlet Mixture Model)   -  Since we cannot use the much more known LDA package to extract topics from the quotes as neither the generally accepted threshold for LDA text size > 250 words nor the assumption that one text treats multiple topics hold for the quotes we wish to analyse, we have to resort to the lesser known GSDMM package (https://github.com/rwalk/gsdmm)
         - The disadvantage is that the algorithm is much less efficient than LDA making it less applicable to huge datasets due to long run times. 
         - If we encounter big runtime limitations we will resort to analyzing specific and representative subsets of our dataset.
@@ -88,47 +85,26 @@ The package is widely used and can handle big amounts of data. Further it is pre
             - For establishing an overview of the topic dependence of female/male speakers we likely have to select the 10 biggest newspapers - from diverse political backgrounds (see our other database) as a proxy for the entire dataset.
 - NLPTK, Spacy and Gensim - in order to handle the quotation data we used these three libraries.
 - Integrated Vaex functions for plotting, Seaborn and Matplotlib plotting tools
-
- 
-### Proposed timeline
-- by Nov. 19th:
-    - Extended descriptive statistics to entire dataset
-        - male-female ratio of chief-editors
-        - male-female quotes ratio in:
-        - different types of newspapers
-        - readership
-        - political spectrum
-        - degree of bias (based on our database)
-        - according to editor’s gender of newspaper
-    - Global Topic analysis across all male and female speakers + comparison
-    - Sentiment analysis across all male and female speakers  + comparison
-- by Nov 23rd:  
-    - focus on HW2
-- by Dec 3rd: 
-    - Topic analysis of quotes referring to women or men (ie. content of the quote, not the speaker)
-        - differences between selected newspapers (to be determined by which newspapers are emblematic (see analyses of week before)
-    - Initializing github pages and textual description of obtained results
-- by Dec 10th:     
-    - Optimizing plots to optimize understanding of key results
-    - Textual description
-    - Layout of GitHub
-- by Dec 17th: 
-    - finalizing description and website and hand-in
+- Dynamic diagrams were generated with the Plotly library
+- Jekyll with the Bootstrap theme clean-blog was used to set up the datastory webpage
 
 
-### Organization within the team
-- Salome: 
-    - GSDMM Analysis of Topics
-    - jointly with Patricia GSDMM analysis of quotes specifically talking about women/men
+### Distribution of the work load
 - Patricia: 
-    - Representation of women within text - Topic analysis
-    - Initialization of github pages
-    - together with Natasa: Descriptive Statistics
+    - Topic analysis, descriptive analysis topics
+    - Writing datastory, page design
 - Natasa:
-    - Descriptive Statistics finalization
-    - Sentiment Analysis
+    - Data loading and subsampling
+    - Descriptive Statistics US high traffic dataset, subsampled set, topics
+    - Final organization notebooks
 - Vladimir:
-    - Support in Topic Analysis
-    - Fine-tuning of plotting
--  all:
-    - Description /Textual presentation
+    - Descriptive Statistics US high traffic dataset and subsampled set
+    - Crawling the web for media data
+    - Setting up of the Jekyll theme on github, graphical design 
+- Salome: 
+    - Data loading, processing subsampling
+    - GSDMM pipeline and topics analysis
+    - Writing datastory, fine tuning website
+- All:
+    - Hand-annotate editors and editor's gender
+    - Finetuning website
