@@ -27,8 +27,8 @@ In the following, we describe the main functionality of the files in the reposit
 |   ├── cleaning - initial data and cleaning (as in MS2)
 |   ├── GDSMM-Final_Pipeline_and_topic_by_gender - Input: subsampled dataset, Output: NLP Preprocessed Dataset (Tokenization, Lemmatization, Generic stopword Removal) &   
 |   |   Subsequent GDSMM Topic analysis for quotes issued by men and women
-|   ├──GDSMM_Topics_about_Gender_plus_Statistics - Employ same pipeline as above except NLP preprocessing: Input: Preprocessed subsample, Output: GDSMM Topic analysis for 
-|      quotes about men and women, Descriptive Statistics on Topics by different Genders and about different genders according to political bias and editor gender.
+|   ├── GDSMM_Topics_about_Gender_plus_Statistics - Employ same pipeline as above except NLP preprocessing: Input: Preprocessed subsample, Output: GDSMM Topic analysis for 
+|       quotes about men and women, Descriptive Statistics on Topics by different Genders and about different genders according to political bias and editor gender.
 .
 ```
  
