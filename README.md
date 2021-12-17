@@ -1,5 +1,9 @@
 ## FEMEDIA - Analyzing female representation in English-speaking written media
- 
+
+### Data Story:
+website: https://vfayt99.github.io/femedia/
+github repo: https://github.com/VFayt99/femedia
+
 ### Abstract
 We believe that media outlets can only be unbiased, if the people in charge as well as the voices portrayed come from a diverse and society-representative background. Here we focus on gender representation in US media that is consumed with the higher frequency, defined based on online page views (https://mediabiasfactcheck.com/methodology/), with the help of Quotebank. Our analysis envisions a fine-grained approach to the overarching question of equal gender representation, which can be answered with an unhelpful NO.
 
@@ -19,7 +23,7 @@ In the following, we describe the main functionality of the files in the reposit
 |   ├── Database Enrichment with Wikidata and Bias Information of Newspapers
 |   ├── Topic Analysis pipeline applied to Quotes issued by Male vs. Female speakers
 ├── notebooks  <-- additional scripts
-|   ├── To be added!!
+|   ├── cleaning - initial data cleaning
 .
 ```
  
